@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Define el tipo de documento como HTML5 -->
     <meta charset="UTF-8">
+    <!-- Especifica la codificación de caracteres (UTF-8) para soportar caracteres especiales -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define el título de la página que se muestra en la pestaña del navegador -->
     <title>Recuento de Números en Columnas</title>
+    <!-- Enlace a una hoja de estilos CSS ubicada en la carpeta /static -->
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+    <!-- Encabezado principal de la página -->
     <h1>Recuento de Números en Columnas</h1>
+    <!-- Breve descripción del propósito del formulario -->
     <p>Ingresa números entre el 1 y el 43 en las 6 columnas</p>
 
+    <!-- Formulario para ingresar números; se envía al servidor con el método POST -->
     <form action="/guardar_numeros" method="POST">
-        <table>
-            <thead>
-                <tr>
-                    <th>Columna 1</th>
-                    <th>Columna 2</th>
-                    <th>Columna 3</th>
-                    <th>Columna 4</th>
-                    <th>Columna 5</th>
-                    <th>Columna 6</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="number" name="col1" min="1" max="43" required></td>
-                    <td><input type="number" name="col2" min="1" max="43" required></td>
-                    <td><input type="number" name="col3" min="1" max="43" required></td>
-                    <td><input type="number" name="col4" min="1" max="43" required></td>
-                    <td><input type="number" name="col5" min="1" max="43" required></td>
-                    <td><input type="number" name="col6" min="1" max="43" required></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Contenedor principal para organizar los campos de entrada -->
+        <div class="contenedor-columnas">
+            <!-- Etiquetas para identificar cada columna -->
+            <div class="columna">
+                <label for="col1">Columna 1</label>
+                <input type="number" id="col1" name="col1" min="1" max="43" required>
+            </div>
+            <div class="columna">
+                <label for="col2">Columna 2</label>
+                <input type="number" id="col2" name="col2" min="1" max="43" required>
+            </div>
+            <div class="columna">
+                <label for="col3">Columna 3</label>
+                <input type="number" id="col3" name="col3" min="1" max="43" required>
+            </div>
+            <div class="columna">
+                <label for="col4">Columna 4</label>
+                <input type="number" id="col4" name="col4" min="1" max="43" required>
+            </div>
+            <div class="columna">
+                <label for="col5">Columna 5</label>
+                <input type="number" id="col5" name="col5" min="1" max="43" required>
+            </div>
+            <div class="columna">
+                <label for="col6">Columna 6</label>
+                <input type="number" id="col6" name="col6" min="1" max="43" required>
+            </div>
+        </div>
         <br>
+        <!-- Botón para enviar el formulario -->
         <button type="submit">Guardar Números</button>
     </form>
 
     <br>
+    <!-- Enlace para navegar a una página donde se muestran los resultados almacenados -->
     <a href="/resultados">Ver resultados almacenados</a>
 </body>
 </html>
+
