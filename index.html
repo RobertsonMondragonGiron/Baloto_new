@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuento de Números en Columnas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Recuento de Números en Columnas</h1>
+    <p>Ingresa números entre el 1 y el 43 en las 6 columnas</p>
+
+    <form action="/guardar_numeros" method="POST">
+        <table>
+            <thead>
+                <tr>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                    <th>Columna 3</th>
+                    <th>Columna 4</th>
+                    <th>Columna 5</th>
+                    <th>Columna 6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" name="col1" min="1" max="43" required></td>
+                    <td><input type="number" name="col2" min="1" max="43" required></td>
+                    <td><input type="number" name="col3" min="1" max="43" required></td>
+                    <td><input type="number" name="col4" min="1" max="43" required></td>
+                    <td><input type="number" name="col5" min="1" max="43" required></td>
+                    <td><input type="number" name="col6" min="1" max="43" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="submit">Guardar Números</button>
+    </form>
+
+    <br>
+    <a href="/resultados">Ver resultados almacenados</a>
+</body>
+</html>
